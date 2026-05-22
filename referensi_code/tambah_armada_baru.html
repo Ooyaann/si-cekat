@@ -1,0 +1,205 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Tambah Armada Baru - SI-CEKAT</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@400&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#8aa8e0",
+                        "surface-container-high": "#e8e7ec",
+                        "secondary-container": "#fea619",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#5e3100",
+                        "primary-fixed": "#d7e3ff",
+                        "inverse-primary": "#abc7ff",
+                        "neutral-mid": "#64748B",
+                        "surface-container": "#eeedf2",
+                        "on-surface-variant": "#43474f",
+                        "surface-bright": "#faf9fe",
+                        "tertiary-fixed": "#ffdcc2",
+                        "surface-tint": "#405e92",
+                        "status-warning": "#D97706",
+                        "tertiary": "#3e1f00",
+                        "on-tertiary-container": "#db9960",
+                        "inverse-surface": "#2f3034",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#6b3b09",
+                        "on-background": "#1a1b1f",
+                        "on-secondary-container": "#684000",
+                        "status-success": "#16A34A",
+                        "primary-container": "#1a3c6e",
+                        "on-primary-fixed": "#001b3f",
+                        "status-danger": "#DC2626",
+                        "on-secondary-fixed-variant": "#653e00",
+                        "inverse-on-surface": "#f1f0f5",
+                        "secondary-fixed": "#ffddb8",
+                        "on-tertiary": "#ffffff",
+                        "neutral-dark": "#1E293B",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "surface": "#faf9fe",
+                        "primary": "#002653",
+                        "neutral-light": "#F1F5F9",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#c4c6d0",
+                        "on-surface": "#1a1b1f",
+                        "on-primary-fixed-variant": "#264679",
+                        "secondary": "#855300",
+                        "background": "#faf9fe",
+                        "secondary-fixed-dim": "#ffb95f",
+                        "page-bg": "#F8FAFC",
+                        "on-tertiary-fixed": "#2e1500",
+                        "tertiary-fixed-dim": "#feb87c",
+                        "on-secondary-fixed": "#2a1700",
+                        "surface-container-highest": "#e3e2e7",
+                        "primary-fixed-dim": "#abc7ff",
+                        "surface-variant": "#e3e2e7",
+                        "surface-dim": "#dad9de",
+                        "surface-container-low": "#f4f3f8",
+                        "outline": "#747780"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "touch-target-min": "44px",
+                        "margin-desktop": "32px",
+                        "gutter": "16px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "technical-data": ["JetBrains Mono"],
+                        "headline-sm": ["Poppins"],
+                        "headline-md": ["Poppins"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Poppins"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Poppins"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "technical-data": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["26px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #F8FAFC; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-page-bg text-on-background min-h-screen flex flex-col antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-surface-container-high dark:border-outline-variant docked full-width top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile h-touch-target-min">
+<button aria-label="Back" class="flex items-center justify-center w-10 h-10 text-primary dark:text-inverse-primary hover:bg-surface-container-low dark:hover:bg-surface-variant rounded-full transition-colors duration-200 ease-in-out">
+<span class="material-symbols-outlined text-headline-md">arrow_back</span>
+</button>
+<div class="flex-1 text-center">
+<h1 class="font-headline-sm text-headline-sm font-bold text-primary dark:text-inverse-primary tracking-tight">Tambah Armada Baru</h1>
+</div>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-margin-mobile py-6 overflow-y-auto w-full max-w-lg mx-auto">
+<form class="space-y-[32px]">
+<!-- Technical Data Section -->
+<div class="bg-surface-container-lowest rounded-xl p-6 border border-neutral-light shadow-sm space-y-6">
+<div class="space-y-1">
+<h2 class="font-headline-sm text-headline-sm text-primary">Identifikasi Kendaraan</h2>
+<p class="font-body-md text-body-md text-neutral-mid">Masukkan data identitas utama kendaraan operasional.</p>
+</div>
+<div class="space-y-[12px]">
+<!-- Nomor Polisi -->
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2" for="nomor_polisi">Nomor Polisi (Plat)</label>
+<input class="w-full bg-surface-container-lowest border border-neutral-light rounded-[6px] px-4 py-3 font-technical-data text-technical-data text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-shadow h-[44px] uppercase placeholder-neutral-mid/50" id="nomor_polisi" name="nomor_polisi" placeholder="Contoh: B 1234 CD" required="" type="text">
+</div>
+<!-- Nomor STUK -->
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2" for="nomor_stuk">Nomor STUK</label>
+<input class="w-full bg-surface-container-lowest border border-neutral-light rounded-[6px] px-4 py-3 font-technical-data text-technical-data text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-shadow h-[44px] placeholder-neutral-mid/50" id="nomor_stuk" name="nomor_stuk" placeholder="Nomor Uji Berkala" required="" type="text">
+</div>
+</div>
+</div>
+<!-- Spesifikasi Section -->
+<div class="bg-surface-container-lowest rounded-xl p-6 border border-neutral-light shadow-sm space-y-6">
+<div class="space-y-1">
+<h2 class="font-headline-sm text-headline-sm text-primary">Spesifikasi Armada</h2>
+</div>
+<div class="space-y-[12px]">
+<!-- Merk/Brand -->
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2" for="merk">Merk / Brand</label>
+<input class="w-full bg-surface-container-lowest border border-neutral-light rounded-[6px] px-4 py-3 font-body-lg text-body-lg text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-shadow h-[44px] placeholder-neutral-mid/50" id="merk" name="merk" placeholder="Contoh: Hino, Mitsubishi" required="" type="text">
+</div>
+<!-- Tahun Pembuatan & Kapasitas Grid -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Tahun -->
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2" for="tahun">Tahun</label>
+<input class="w-full bg-surface-container-lowest border border-neutral-light rounded-[6px] px-4 py-3 font-technical-data text-technical-data text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-shadow h-[44px] placeholder-neutral-mid/50" id="tahun" max="2025" min="1990" name="tahun" placeholder="YYYY" required="" type="number">
+</div>
+<!-- Kapasitas -->
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2" for="kapasitas">Kapasitas (Orang/Kg)</label>
+<input class="w-full bg-surface-container-lowest border border-neutral-light rounded-[6px] px-4 py-3 font-body-lg text-body-lg text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-shadow h-[44px] placeholder-neutral-mid/50" id="kapasitas" name="kapasitas" placeholder="Contoh: 40 Orang" required="" type="text">
+</div>
+</div>
+<!-- Jenis Angkutan -->
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2" for="jenis_angkutan">Jenis Angkutan</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-lowest border border-neutral-light rounded-[6px] px-4 py-3 font-body-lg text-body-lg text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-shadow h-[44px]" id="jenis_angkutan" name="jenis_angkutan" required="">
+<option disabled="" selected="" value="">Pilih Jenis Angkutan</option>
+<option value="AKAP">AKAP (Antar Kota Antar Provinsi)</option>
+<option value="AKDP">AKDP (Antar Kota Dalam Provinsi)</option>
+<option value="Pariwisata">Pariwisata</option>
+<option value="Barang">Angkutan Barang</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-neutral-mid">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Area -->
+<div class="pt-4 pb-8 space-y-[12px]">
+<button class="w-full h-touch-target-min flex items-center justify-center bg-primary text-on-primary font-headline-sm text-headline-sm rounded-[6px] transition-transform active:scale-[0.98] shadow-sm hover:bg-primary-fixed-variant hover:text-on-primary-fixed-variant" type="button">
+                    Simpan Data Armada
+                </button>
+<button class="w-full h-touch-target-min flex items-center justify-center bg-surface-container-lowest text-neutral-dark font-body-lg text-body-lg border border-neutral-light rounded-[6px] transition-colors hover:bg-surface-container-low active:bg-surface-container" type="button">
+                    Batal
+                </button>
+</div>
+</form>
+</main>
+<!-- Navigation Shell suppressed because this is a transactional sub-page with a 'Cancel'/'Back' action flow -->
+</body></html>

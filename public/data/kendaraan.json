@@ -1,0 +1,56 @@
+[
+  {
+    "id": "KND-001",
+    "nomorPolisi": "B 7123 KCA",
+    "nomorSTUK": "KIR-JKT-8821-A",
+    "namaPO": "PO. Sinar Jaya",
+    "merk": "Mercedes-Benz OH 1626L",
+    "tahun": 2019,
+    "kapasitas": 40,
+    "jenisAngkutan": "AKAP",
+    "trayek": "Jakarta - Bandung",
+    "status": "aktif",
+    "lokasi": "Pool Jakarta Utama",
+    "dokumen": {
+      "stuk": { "nomor": "KIR-JKT-8821-A", "berlakuSampai": "2026-10-12" },
+      "kpReguler": { "nomor": "KP-001", "berlakuSampai": "2027-01-15" },
+      "asuransi": { "nomor": "INS-001", "berlakuSampai": "2026-08-30" }
+    }
+  },
+  {
+    "id": "KND-002",
+    "nomorPolisi": "D 5678 EF",
+    "nomorSTUK": "KIR-BDG-4421-B",
+    "namaPO": "PO. Kramat Djati",
+    "merk": "Hino RK8",
+    "tahun": 2021,
+    "kapasitas": 50,
+    "jenisAngkutan": "Pariwisata",
+    "trayek": "Bandung - Semarang",
+    "status": "aktif",
+    "lokasi": "Pool Jakarta Utama",
+    "dokumen": {
+      "stuk": { "nomor": "KIR-BDG-4421-B", "berlakuSampai": "2026-06-15" },
+      "kpReguler": { "nomor": "KP-002", "berlakuSampai": "2026-09-20" },
+      "asuransi": { "nomor": "INS-002", "berlakuSampai": "2026-12-01" }
+    }
+  },
+  {
+    "id": "KND-003",
+    "nomorPolisi": "F 9012 GH",
+    "nomorSTUK": "KIR-BGR-6601-C",
+    "namaPO": "PO. Budiman",
+    "merk": "Scania K410",
+    "tahun": 2022,
+    "kapasitas": 45,
+    "jenisAngkutan": "AKDP",
+    "trayek": "Bogor - Sukabumi",
+    "status": "aktif",
+    "lokasi": "Pool Jakarta Utama",
+    "dokumen": {
+      "stuk": { "nomor": "KIR-BGR-6601-C", "berlakuSampai": "2027-03-10" },
+      "kpReguler": { "nomor": "KP-003", "berlakuSampai": "2027-05-25" },
+      "asuransi": { "nomor": "INS-003", "berlakuSampai": "2027-01-18" }
+    }
+  }
+]

@@ -1,0 +1,304 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&amp;family=Inter:wght@400;600;700&amp;family=JetBrains+Mono&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#e8e7ec",
+                    "outline": "#747780",
+                    "surface": "#faf9fe",
+                    "inverse-primary": "#abc7ff",
+                    "tertiary-fixed": "#ffdcc2",
+                    "outline-variant": "#c4c6d0",
+                    "on-surface-variant": "#43474f",
+                    "on-background": "#1a1b1f",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#6b3b09",
+                    "status-danger": "#DC2626",
+                    "on-secondary": "#ffffff",
+                    "status-warning": "#D97706",
+                    "surface-bright": "#faf9fe",
+                    "surface-dim": "#dad9de",
+                    "secondary": "#855300",
+                    "on-secondary-container": "#684000",
+                    "error": "#ba1a1a",
+                    "primary": "#002653",
+                    "surface-container-highest": "#e3e2e7",
+                    "primary-fixed": "#d7e3ff",
+                    "tertiary-container": "#5e3100",
+                    "on-primary-container": "#8aa8e0",
+                    "neutral-mid": "#64748B",
+                    "neutral-dark": "#1E293B",
+                    "surface-tint": "#405e92",
+                    "on-tertiary-container": "#db9960",
+                    "tertiary": "#3e1f00",
+                    "on-primary-fixed": "#001b3f",
+                    "secondary-fixed": "#ffddb8",
+                    "on-tertiary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#fea619",
+                    "tertiary-fixed-dim": "#feb87c",
+                    "page-bg": "#F8FAFC",
+                    "surface-container": "#eeedf2",
+                    "background": "#faf9fe",
+                    "on-primary-fixed-variant": "#264679",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#2e1500",
+                    "surface-variant": "#e3e2e7",
+                    "on-secondary-fixed": "#2a1700",
+                    "inverse-on-surface": "#f1f0f5",
+                    "inverse-surface": "#2f3034",
+                    "secondary-fixed-dim": "#ffb95f",
+                    "status-success": "#16A34A",
+                    "error-container": "#ffdad6",
+                    "primary-container": "#1a3c6e",
+                    "surface-container-low": "#f4f3f8",
+                    "on-secondary-fixed-variant": "#653e00",
+                    "on-error": "#ffffff",
+                    "primary-fixed-dim": "#abc7ff",
+                    "neutral-light": "#F1F5F9",
+                    "on-surface": "#1a1b1f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "touch-target-min": "44px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "32px",
+                    "unit": "4px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "headline-sm": ["Poppins"],
+                    "display-lg": ["Poppins"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "headline-md": ["Poppins"],
+                    "technical-data": ["JetBrains Mono"],
+                    "headline-lg-mobile": ["Poppins"]
+            },
+            "fontSize": {
+                    "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "technical-data": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["26px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .sync-animation {
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .shimmer {
+            background: linear-gradient(90deg, #F1F5F9 25%, #E2E8F0 50%, #F1F5F9 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+    </style>
+</head>
+<body class="bg-page-bg text-on-background font-body-md antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-on-surface-variant flex justify-between items-center px-margin-mobile h-touch-target-min w-full">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOQXV1-r6ckEIzkMSEHFEI4Nl6_AwFzUS3vbopmiokYugavHd5ouG9TkT8Umcmb6yLuAnnVQ-hjkMUVHp3IamZRte3jL94Nfhnhl99yVFfpHU0cR_Mb9tTtBe-URzUqeESU5lR7saCvN9KNYA2qwjynkKTFWzDsL1seCAYuVFWYcFtcHhEts6v_DBnXut7-l711mLLYFrZ0n8FJO2DAkOxPgFBwjSCjTlVTTtD2w4OqimBailOwOrl0IPpt6ssNfY4mTCVkwQEEVo">
+</div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">SI-CEKAT</h1>
+</div>
+<button class="material-symbols-outlined text-primary dark:text-primary-fixed hover:bg-surface-container-low transition-colors p-2 rounded-lg">notifications</button>
+</header>
+<main class="pt-20 pb-24 px-margin-mobile max-w-md mx-auto min-h-screen">
+<!-- Page Title -->
+<div class="mb-6">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-neutral-dark">Sinkronisasi Data</h2>
+<p class="font-body-md text-on-surface-variant">Kelola pengunggahan data inspeksi lapangan.</p>
+</div>
+<!-- Status Overview Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-5 mb-gutter shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-status-success/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-status-success text-3xl">cloud_done</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Status Koneksi</span>
+<p class="font-headline-sm text-headline-sm text-status-success">Sistem Online</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Sinyal</span>
+<span class="material-symbols-outlined text-primary">signal_cellular_4_bar</span>
+</div>
+</div>
+<div class="p-4 bg-primary-container/10 rounded-lg border border-primary/10 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">pending_actions</span>
+<span class="font-body-md font-bold text-primary">3 Inspeksi Belum Terkirim</span>
+</div>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-caps text-label-caps transition-transform active:scale-95 flex items-center gap-2" id="sync-btn">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+                    SYNC NOW
+                </button>
+</div>
+</div>
+<!-- Queue Section -->
+<div class="mb-6">
+<div class="flex items-center justify-between mb-3">
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Antrean Unggahan</h3>
+<span class="font-technical-data text-technical-data text-neutral-mid">3 Item</span>
+</div>
+<div class="space-y-3">
+<!-- Sync Item 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 flex flex-col gap-3 group">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">directions_bus</span>
+</div>
+<div>
+<p class="font-body-lg font-bold text-neutral-dark">B 9042 TGA</p>
+<p class="font-technical-data text-[12px] text-on-surface-variant">Saved: 24 May 2024, 14:22</p>
+</div>
+</div>
+<span class="bg-status-warning/10 text-status-warning px-2 py-0.5 rounded font-label-caps text-[10px] border border-status-warning/20">PENDING</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[0%] transition-all duration-500" id="progress-1"></div>
+</div>
+</div>
+<!-- Sync Item 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 flex flex-col gap-3 group">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">local_shipping</span>
+</div>
+<div>
+<p class="font-body-lg font-bold text-neutral-dark">D 1288 VCC</p>
+<p class="font-technical-data text-[12px] text-on-surface-variant">Saved: 24 May 2024, 14:45</p>
+</div>
+</div>
+<span class="bg-primary-container/20 text-primary px-2 py-0.5 rounded font-label-caps text-[10px] border border-primary/20 flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px] sync-animation">sync</span> SYNCING
+                        </span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[45%] sync-shimmer" id="progress-2"></div>
+</div>
+</div>
+<!-- Sync Item 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 flex flex-col gap-3 group">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">directions_bus</span>
+</div>
+<div>
+<p class="font-body-lg font-bold text-neutral-dark">AD 4412 KL</p>
+<p class="font-technical-data text-[12px] text-on-surface-variant">Saved: 24 May 2024, 15:10</p>
+</div>
+</div>
+<span class="bg-status-warning/10 text-status-warning px-2 py-0.5 rounded font-label-caps text-[10px] border border-status-warning/20">PENDING</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[0%] transition-all duration-500" id="progress-3"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Info Section -->
+<div class="bg-neutral-light border border-outline-variant rounded-xl p-5 flex gap-4">
+<span class="material-symbols-outlined text-primary mt-1">info</span>
+<div class="flex flex-col gap-1">
+<p class="font-body-md font-bold text-neutral-dark">Data Tersimpan Aman</p>
+<p class="font-body-md text-on-surface-variant leading-relaxed">Jangan khawatir. Semua data inspeksi Anda tersimpan secara lokal dengan enkripsi tingkat tinggi di dalam perangkat ini. Data akan otomatis terkirim saat koneksi internet stabil kembali.</p>
+</div>
+</div>
+<!-- Illustration (Decorative) -->
+<div class="mt-8 flex justify-center opacity-30">
+<img class="w-48 grayscale" data-alt="A clean, minimalist 3D render of a digital cloud storage system with glowing blue fiber optic lines connecting to a central server. The scene is bright and clinical, emphasizing security and technical precision within a professional fleet management context. Soft white lighting and a high-key aesthetic dominate the composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6Bs4ydMW0RyUixTuBok83mVsDnYISdlosrSaW4NRLAmh5aBKcfF8x3lf_dHghtjqLI7pwcdHPdHLeKfmG2_ZrSKIL3LMNSId_GS912PbTrJuw5g9cpWnuhc5-m3xtLwYDGr7h33ucEXqCtHgiL4Qb9YWl5T-EkPhFpLbcX7cqS_IRDNGpHlIkW_P0Rj4dbTYaDQ4QgOPIMxETWee_Hf-m6i34gH2x3bLKZErJBzAsUhuIMZSNAhT5Dk_8pr-6o5Ono_AgnPMItUw">
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface-container-lowest dark:bg-inverse-surface shadow-[0px_-4px_12px_rgba(30,41,59,0.05)] shadow-md flex justify-around items-center w-full px-margin-mobile h-[64px]">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant pt-1 hover:text-primary active:scale-95 transition-all" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-caps text-label-caps">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed border-t-2 border-primary dark:border-primary-fixed pt-1 active:scale-95 transition-all" href="#">
+<span class="material-symbols-outlined">fact_check</span>
+<span class="font-label-caps text-label-caps">Inspection</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant pt-1 hover:text-primary active:scale-95 transition-all" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-caps text-label-caps">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant pt-1 hover:text-primary active:scale-95 transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-caps text-label-caps">Profile</span>
+</a>
+</nav>
+<script>
+        document.getElementById('sync-btn').addEventListener('click', function() {
+            const btn = this;
+            const icon = btn.querySelector('.material-symbols-outlined');
+            const progressBars = [
+                document.getElementById('progress-1'),
+                document.getElementById('progress-2'),
+                document.getElementById('progress-3')
+            ];
+
+            // Change button state
+            btn.innerHTML = '<span class="material-symbols-outlined text-[18px] sync-animation">sync</span> SYNCING...';
+            btn.classList.add('opacity-70', 'pointer-events-none');
+
+            // Simulate progress
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 5;
+                progressBars.forEach((bar, index) => {
+                    const individualProgress = Math.min(100, progress * (1 + index * 0.2));
+                    bar.style.width = individualProgress + '%';
+                });
+
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check_circle</span> COMPLETE';
+                    btn.classList.remove('bg-primary');
+                    btn.classList.add('bg-status-success');
+                    
+                    // Reset or show success state
+                    setTimeout(() => {
+                        alert('Semua data berhasil disinkronisasi!');
+                    }, 500);
+                }
+            }, 100);
+        });
+    </script>
+</body></html>

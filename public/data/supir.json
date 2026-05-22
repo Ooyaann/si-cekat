@@ -1,0 +1,28 @@
+[
+  {
+    "id": "DRV-8821",
+    "nama": "Budi Santoso",
+    "nomorSIM": "8291-3321-998",
+    "tipeSIM": "B1 Umum",
+    "masaBerlakuSIM": "2026-12-08",
+    "umur": 42,
+    "telepon": "081234567890",
+    "foto": null,
+    "pin": "1234",
+    "status": "aktif",
+    "kendaraanAktif": "KND-001"
+  },
+  {
+    "id": "DRV-8822",
+    "nama": "Agus Setiawan",
+    "nomorSIM": "7761-2219-445",
+    "tipeSIM": "B2 Umum",
+    "masaBerlakuSIM": "2025-11-05",
+    "umur": 38,
+    "telepon": "082198765432",
+    "foto": null,
+    "pin": "5678",
+    "status": "aktif",
+    "kendaraanAktif": "KND-002"
+  }
+]

@@ -1,0 +1,265 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Daftar Armada - SI-CEKAT</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "neutral-dark": "#1E293B",
+                        "tertiary-container": "#5e3100",
+                        "on-background": "#1a1b1f",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "status-warning": "#D97706",
+                        "surface-container-low": "#f4f3f8",
+                        "inverse-on-surface": "#f1f0f5",
+                        "on-surface": "#1a1b1f",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#e3e2e7",
+                        "secondary-container": "#fea619",
+                        "on-primary-fixed-variant": "#264679",
+                        "on-tertiary": "#ffffff",
+                        "status-danger": "#DC2626",
+                        "primary-container": "#1a3c6e",
+                        "secondary-fixed-dim": "#ffb95f",
+                        "tertiary": "#3e1f00",
+                        "on-primary-fixed": "#001b3f",
+                        "on-tertiary-container": "#db9960",
+                        "neutral-mid": "#64748B",
+                        "surface-tint": "#405e92",
+                        "background": "#faf9fe",
+                        "secondary-fixed": "#ffddb8",
+                        "status-success": "#16A34A",
+                        "outline": "#747780",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#eeedf2",
+                        "on-secondary-fixed": "#2a1700",
+                        "surface-bright": "#faf9fe",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#abc7ff",
+                        "page-bg": "#F8FAFC",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#feb87c",
+                        "primary": "#002653",
+                        "outline-variant": "#c4c6d0",
+                        "on-primary-container": "#8aa8e0",
+                        "inverse-surface": "#2f3034",
+                        "surface-variant": "#e3e2e7",
+                        "surface": "#faf9fe",
+                        "on-surface-variant": "#43474f",
+                        "on-tertiary-fixed": "#2e1500",
+                        "on-secondary-container": "#684000",
+                        "on-secondary-fixed-variant": "#653e00",
+                        "neutral-light": "#F1F5F9",
+                        "surface-dim": "#dad9de",
+                        "primary-fixed": "#d7e3ff",
+                        "secondary": "#855300",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#abc7ff",
+                        "surface-container-high": "#e8e7ec",
+                        "tertiary-fixed": "#ffdcc2",
+                        "on-tertiary-fixed-variant": "#6b3b09"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "touch-target-min": "44px",
+                        "gutter": "16px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "32px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Poppins"],
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Poppins"],
+                        "technical-data": ["JetBrains Mono"],
+                        "headline-sm": ["Poppins"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Poppins"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["26px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "display-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "technical-data": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-page-bg text-on-surface antialiased min-h-screen flex flex-col font-body-md">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-[0px_4px_12px_rgba(30,41,59,0.05)] docked full-width top-0 z-50">
+<div class="flex justify-between items-center px-margin-mobile h-14 w-full z-50">
+<button aria-label="Menu" class="text-primary dark:text-inverse-primary hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform duration-150 p-2 rounded-full flex items-center justify-center min-h-[44px] min-w-[44px]">
+<span aria-hidden="true" class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary" style="color: rgb(26, 60, 110);">SI-CEKAT</h1>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden hover:bg-surface-container-high transition-colors cursor-pointer border border-outline-variant">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="A close-up portrait of a professional man in a clean, modern white studio setting. Soft, diffuse lighting highlights his features. The color palette is minimal, focusing on cool greys and whites, echoing a technical corporate aesthetic. High resolution and sharp focus on the face." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFS5l5NJPcRNr_q0WDbi6BVI0W5vLqiOJGru-4k13F6o2F_DXuRofUUkjZ1YxB_kyMPPwwTgujC8z_B8kMbhlsGVN1FL0dOkPxLp4Lob-7jkUxVhoDHaP2j_muHxRVU0lr79mfPi4IkvRc3F_0fjKhjoIj_9o3kD1P8xJ1u-1hrOtRAYQRegWoC4YvvXIenjXFMBuOH0rmtoQuR-3wkey8TY8UF-z9Ydg6JVBemG9dhtDhskq4PlMA9BMXOCf0OubNkkpcS4u3q6Q">
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-[72px] pb-[88px] px-margin-mobile md:px-margin-desktop w-full max-w-[800px] mx-auto">
+<!-- Header & Search -->
+<div class="mb-8 mt-4">
+<h2 class="font-headline-sm text-headline-sm text-neutral-dark mb-4">Daftar Armada</h2>
+<div class="flex flex-col gap-4">
+<div class="relative">
+<span aria-hidden="true" class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-mid pointer-events-none" data-icon="search">search</span>
+<input class="w-full h-touch-target-min pl-10 pr-4 rounded-lg border border-neutral-light bg-on-primary focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-body-md text-neutral-dark placeholder:text-neutral-mid transition-all shadow-sm" placeholder="Cari Plat Nomor atau PO..." type="text">
+</div>
+<!-- Filters -->
+<div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide snap-x">
+<button class="snap-start shrink-0 h-[36px] px-4 rounded-full border border-primary bg-primary text-on-primary text-label-caps font-label-caps transition-colors">Semua</button>
+<button class="snap-start shrink-0 h-[36px] px-4 rounded-full border border-outline-variant bg-surface hover:bg-surface-container-high text-on-surface-variant text-label-caps font-label-caps transition-colors">Laik</button>
+<button class="snap-start shrink-0 h-[36px] px-4 rounded-full border border-outline-variant bg-surface hover:bg-surface-container-high text-on-surface-variant text-label-caps font-label-caps transition-colors">Tidak Laik</button>
+<button class="snap-start shrink-0 h-[36px] px-4 rounded-full border border-outline-variant bg-surface hover:bg-surface-container-high text-on-surface-variant text-label-caps font-label-caps transition-colors">Belum Inspeksi</button>
+</div>
+</div>
+</div>
+<!-- Fleet Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Card 1: Laik -->
+<div class="bg-on-primary rounded-xl border border-neutral-light p-4 shadow-sm hover:border-primary transition-colors flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div>
+<div class="font-technical-data text-technical-data text-neutral-dark font-bold mb-1">B 1234 CD</div>
+<div class="text-body-md font-body-md text-neutral-mid">PO. Sinar Jaya</div>
+</div>
+<div class="bg-status-success text-on-primary px-2 py-1 rounded text-[10px] font-bold tracking-wider uppercase">Laik</div>
+</div>
+<div class="border-t border-neutral-light pt-3 flex gap-4 mt-auto">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-status-success" data-icon="check_circle">check_circle</span>
+<span class="text-label-caps font-label-caps text-neutral-mid">STUK</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-status-success" data-icon="check_circle">check_circle</span>
+<span class="text-label-caps font-label-caps text-neutral-mid">KIR</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Tidak Laik -->
+<div class="bg-on-primary rounded-xl border border-neutral-light p-4 shadow-sm hover:border-primary transition-colors flex flex-col gap-3 relative overflow-hidden">
+<div class="absolute top-0 bottom-0 left-0 w-1 bg-status-danger"></div>
+<div class="flex justify-between items-start pl-2">
+<div>
+<div class="font-technical-data text-technical-data text-neutral-dark font-bold mb-1">D 5678 EF</div>
+<div class="text-body-md font-body-md text-neutral-mid">PO. Kramat Djati</div>
+</div>
+<div class="bg-status-danger text-on-primary px-2 py-1 rounded text-[10px] font-bold tracking-wider uppercase">Tidak Laik</div>
+</div>
+<div class="border-t border-neutral-light pt-3 flex gap-4 mt-auto pl-2">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-status-danger" data-icon="cancel">cancel</span>
+<span class="text-label-caps font-label-caps text-neutral-mid">STUK</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-status-success" data-icon="check_circle">check_circle</span>
+<span class="text-label-caps font-label-caps text-neutral-mid">KIR</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Belum -->
+<div class="bg-on-primary rounded-xl border border-neutral-light p-4 shadow-sm hover:border-primary transition-colors flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div>
+<div class="font-technical-data text-technical-data text-neutral-dark font-bold mb-1">F 9012 GH</div>
+<div class="text-body-md font-body-md text-neutral-mid">PO. Budiman</div>
+</div>
+<div class="bg-neutral-mid text-on-primary px-2 py-1 rounded text-[10px] font-bold tracking-wider uppercase">Belum</div>
+</div>
+<div class="border-t border-neutral-light pt-3 flex gap-4 mt-auto">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-neutral-mid" data-icon="pending">pending</span>
+<span class="text-label-caps font-label-caps text-neutral-mid">STUK</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-neutral-mid" data-icon="pending">pending</span>
+<span class="text-label-caps font-label-caps text-neutral-mid">KIR</span>
+</div>
+</div>
+</div>
+<!-- Card 4: Laik -->
+<div class="bg-on-primary rounded-xl border border-neutral-light p-4 shadow-sm hover:border-primary transition-colors flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div>
+<div class="font-technical-data text-technical-data text-neutral-dark font-bold mb-1">L 3456 IJ</div>
+<div class="text-body-md font-body-md text-neutral-mid">PO. Harapan Jaya</div>
+</div>
+<div class="bg-status-success text-on-primary px-2 py-1 rounded text-[10px] font-bold tracking-wider uppercase">Laik</div>
+</div>
+<div class="border-t border-neutral-light pt-3 flex gap-4 mt-auto">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-status-success" data-icon="check_circle">check_circle</span>
+<span class="text-label-caps font-label-caps text-neutral-mid">STUK</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-status-warning" data-icon="warning">warning</span>
+<span class="text-label-caps font-label-caps text-status-warning">KIR (Expiring)</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- FAB -->
+<button aria-label="Tambah Armada" class="fixed bottom-[88px] right-4 w-14 h-14 bg-primary text-on-primary rounded-full shadow-lg flex items-center justify-center hover:bg-primary-container transition-colors z-40 active:scale-95">
+<span class="material-symbols-outlined text-[24px]" data-icon="add">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="bg-surface dark:bg-inverse-surface border-t border-outline-variant dark:border-outline shadow-[0px_-4px_12px_rgba(30,41,59,0.05)] fixed bottom-0 w-full z-50 md:hidden block">
+<div class="flex justify-around items-center w-full h-16 px-gutter"><a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant pt-2 hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors active:opacity-80 transition-opacity w-full h-full" href="#">
+  <span aria-hidden="true" class="material-symbols-outlined">home</span>
+  <span class="font-label-caps text-label-caps mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant pt-2 hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors active:opacity-80 transition-opacity w-full h-full" href="#">
+  <span aria-hidden="true" class="material-symbols-outlined">assignment</span>
+  <span class="font-label-caps text-label-caps mt-1">Inspeksi</span>
+</a>
+<a aria-current="page" class="flex flex-col items-center justify-center text-primary dark:text-inverse-primary border-t-2 border-primary pt-2 hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors active:opacity-80 transition-opacity w-full h-full" href="#">
+  <span aria-hidden="true" class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+  <span class="font-label-caps text-label-caps mt-1">Armada</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant pt-2 hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors active:opacity-80 transition-opacity w-full h-full" href="#">
+  <span aria-hidden="true" class="material-symbols-outlined">person</span>
+  <span class="font-label-caps text-label-caps mt-1">Profil</span>
+</a></div>
+</nav>
+<style>
+        /* Hide scrollbar for horizontal scrolling filter area */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+
+
+</body></html>

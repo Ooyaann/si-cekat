@@ -1,0 +1,236 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>SI-CEKAT - Notifications</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "neutral-dark": "#1E293B",
+                        "tertiary-container": "#5e3100",
+                        "on-background": "#1a1b1f",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "status-warning": "#D97706",
+                        "surface-container-low": "#f4f3f8",
+                        "inverse-on-surface": "#f1f0f5",
+                        "on-surface": "#1a1b1f",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#e3e2e7",
+                        "secondary-container": "#fea619",
+                        "on-primary-fixed-variant": "#264679",
+                        "on-tertiary": "#ffffff",
+                        "status-danger": "#DC2626",
+                        "primary-container": "#1a3c6e",
+                        "secondary-fixed-dim": "#ffb95f",
+                        "tertiary": "#3e1f00",
+                        "on-primary-fixed": "#001b3f",
+                        "on-tertiary-container": "#db9960",
+                        "neutral-mid": "#64748B",
+                        "surface-tint": "#405e92",
+                        "background": "#faf9fe",
+                        "secondary-fixed": "#ffddb8",
+                        "status-success": "#16A34A",
+                        "outline": "#747780",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#eeedf2",
+                        "on-secondary-fixed": "#2a1700",
+                        "surface-bright": "#faf9fe",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#abc7ff",
+                        "page-bg": "#F8FAFC",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#feb87c",
+                        "primary": "#002653",
+                        "outline-variant": "#c4c6d0",
+                        "on-primary-container": "#8aa8e0",
+                        "inverse-surface": "#2f3034",
+                        "surface-variant": "#e3e2e7",
+                        "surface": "#faf9fe",
+                        "on-surface-variant": "#43474f",
+                        "on-tertiary-fixed": "#2e1500",
+                        "on-secondary-container": "#684000",
+                        "on-secondary-fixed-variant": "#653e00",
+                        "neutral-light": "#F1F5F9",
+                        "surface-dim": "#dad9de",
+                        "primary-fixed": "#d7e3ff",
+                        "secondary": "#855300",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#abc7ff",
+                        "surface-container-high": "#e8e7ec",
+                        "tertiary-fixed": "#ffdcc2",
+                        "on-tertiary-fixed-variant": "#6b3b09"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "touch-target-min": "44px",
+                        "gutter": "16px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "32px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Poppins"],
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Poppins"],
+                        "technical-data": ["JetBrains Mono"],
+                        "headline-sm": ["Poppins"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Poppins"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["26px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "technical-data": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-page-bg text-on-surface min-h-screen flex flex-col md:flex-row pb-16 md:pb-0">
+<!-- Mobile TopAppBar -->
+<header class="md:hidden bg-surface text-primary font-headline-sm text-headline-sm sticky top-0 border-b border-outline-variant shadow-[0px_4px_12px_rgba(30,41,59,0.05)] flex justify-between items-center px-margin-mobile h-14 w-full z-50">
+<button aria-label="Menu" class="text-on-surface-variant hover:bg-surface-container-high transition-colors active:scale-95 transition-transform duration-150 p-2 rounded-full">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">SI-CEKAT</h1>
+<button aria-label="User profile avatar" class="text-on-surface-variant hover:bg-surface-container-high transition-colors active:scale-95 transition-transform duration-150 p-2 rounded-full">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 max-w-[800px] mx-auto w-full p-margin-mobile md:p-margin-desktop space-y-8">
+<!-- Header & Actions -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-neutral-light pb-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary">Notification Center</h2>
+<p class="font-body-md text-body-md text-neutral-mid mt-1">Manage urgent alerts, system updates, and document reminders.</p>
+</div>
+<button class="bg-surface text-primary border border-outline-variant rounded hover:bg-surface-container-low transition-colors px-4 h-touch-target-min flex items-center justify-center gap-2 font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+                MARK ALL AS READ
+            </button>
+</div>
+<!-- Filters -->
+<div class="flex gap-2 overflow-x-auto pb-2 -mx-margin-mobile px-margin-mobile md:mx-0 md:px-0 hide-scrollbar">
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-primary text-on-primary font-label-caps text-label-caps">All Alerts (12)</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface border border-outline-variant text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-caps text-label-caps">Urgent (3)</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface border border-outline-variant text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-caps text-label-caps">Documents (5)</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface border border-outline-variant text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-caps text-label-caps">System (4)</button>
+</div>
+<!-- Notification List -->
+<div class="space-y-3">
+<!-- Urgent Notification (Danger) -->
+<div class="bg-white border-l-4 border-status-danger border-y border-r border-y-neutral-light border-r-neutral-light rounded p-4 flex gap-4 hover:bg-surface-container-low transition-colors relative group">
+<div class="absolute top-4 right-4 w-2 h-2 rounded-full bg-status-danger"></div>
+<div class="flex-shrink-0 mt-1">
+<div class="w-10 h-10 rounded-full bg-error-container flex items-center justify-center text-status-danger">
+<span class="material-symbols-outlined fill">warning</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded bg-status-danger text-on-primary font-label-caps text-[10px] tracking-wider uppercase">TIDAK LAIK</span>
+<span class="font-body-md text-body-md text-neutral-mid text-xs">Just now</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-primary font-semibold mb-1">Critical Inspection Failure</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">Bus <span class="font-technical-data bg-neutral-light px-1 rounded">B 1234 CD</span> declared TIDAK LAIK due to critical brake system failure.</p>
+<button class="text-primary font-label-caps text-label-caps hover:underline mt-2">VIEW REPORT</button>
+</div>
+</div>
+<!-- Warning Notification (Document Expiration) -->
+<div class="bg-white border-l-4 border-status-warning border-y border-r border-y-neutral-light border-r-neutral-light rounded p-4 flex gap-4 hover:bg-surface-container-low transition-colors relative">
+<div class="absolute top-4 right-4 w-2 h-2 rounded-full bg-status-warning"></div>
+<div class="flex-shrink-0 mt-1">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-status-warning">
+<span class="material-symbols-outlined">description</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-caps text-label-caps text-status-warning uppercase">Document Expiring</span>
+<span class="font-body-md text-body-md text-neutral-mid text-xs">2 hours ago</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-primary font-semibold mb-1">STNK Renewal Required</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Vehicle <span class="font-technical-data bg-neutral-light px-1 rounded">D 5678 EF</span> STNK will expire in 7 days. Please schedule renewal.</p>
+</div>
+</div>
+<!-- System Notification (Info) -->
+<div class="bg-white border border-neutral-light rounded p-4 flex gap-4 hover:bg-surface-container-low transition-colors">
+<div class="flex-shrink-0 mt-1">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">system_update</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-caps text-label-caps text-neutral-mid uppercase">System Update</span>
+<span class="font-body-md text-body-md text-neutral-mid text-xs">Yesterday</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-primary font-semibold mb-1">Scheduled Maintenance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">SI-CEKAT will undergo scheduled maintenance on Saturday at 02:00 AM WIB for approximately 2 hours.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden bg-surface text-primary font-label-caps text-label-caps fixed bottom-0 w-full z-50 border-t border-outline-variant shadow-[0px_-4px_12px_rgba(30,41,59,0.05)] flex justify-around items-center h-16 px-gutter">
+<a class="flex flex-col items-center justify-center text-on-surface-variant pt-2 hover:bg-surface-container-low transition-colors active:opacity-80 transition-opacity flex-1 h-full" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]">home</span>
+<span>Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant pt-2 hover:bg-surface-container-low transition-colors active:opacity-80 transition-opacity flex-1 h-full" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]">fact_check</span>
+<span>Inspection</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant pt-2 hover:bg-surface-container-low transition-colors active:opacity-80 transition-opacity flex-1 h-full" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]">history</span>
+<span>History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary border-t-2 border-primary pt-2 hover:bg-surface-container-low transition-colors active:opacity-80 transition-opacity flex-1 h-full" href="#">
+<span class="material-symbols-outlined fill mb-1 text-[24px]">person</span>
+<span>Profile</span>
+</a>
+</nav>
+<style>
+        /* Utility to hide scrollbar for horizontal scrolling filter area */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

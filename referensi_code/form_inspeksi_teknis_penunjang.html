@@ -1,0 +1,509 @@
+<!DOCTYPE html><html lang="id" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Form Inspeksi - Seksi III</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-container": "#5e3100",
+                      "surface-container-highest": "#e3e2e7",
+                      "neutral-mid": "#64748B",
+                      "inverse-primary": "#abc7ff",
+                      "secondary-container": "#fea619",
+                      "on-background": "#1a1b1f",
+                      "surface-container": "#eeedf2",
+                      "tertiary": "#3e1f00",
+                      "inverse-surface": "#2f3034",
+                      "on-surface-variant": "#43474f",
+                      "on-primary-fixed-variant": "#264679",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "on-secondary": "#ffffff",
+                      "on-primary-container": "#8aa8e0",
+                      "primary-container": "#1a3c6e",
+                      "primary-fixed-dim": "#abc7ff",
+                      "on-tertiary-container": "#db9960",
+                      "on-secondary-fixed": "#2a1700",
+                      "on-secondary-container": "#684000",
+                      "secondary": "#855300",
+                      "on-primary-fixed": "#001b3f",
+                      "neutral-light": "#F1F5F9",
+                      "surface-variant": "#e3e2e7",
+                      "on-tertiary-fixed": "#2e1500",
+                      "surface": "#faf9fe",
+                      "page-bg": "#F8FAFC",
+                      "on-tertiary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "surface-bright": "#faf9fe",
+                      "on-primary": "#ffffff",
+                      "surface-tint": "#405e92",
+                      "secondary-fixed": "#ffddb8",
+                      "background": "#faf9fe",
+                      "tertiary-fixed-dim": "#feb87c",
+                      "on-secondary-fixed-variant": "#653e00",
+                      "surface-container-lowest": "#ffffff",
+                      "status-warning": "#D97706",
+                      "surface-dim": "#dad9de",
+                      "primary": "#002653",
+                      "outline": "#747780",
+                      "surface-container-low": "#f4f3f8",
+                      "status-success": "#16A34A",
+                      "surface-container-high": "#e8e7ec",
+                      "outline-variant": "#c4c6d0",
+                      "neutral-dark": "#1E293B",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-fixed-variant": "#6b3b09",
+                      "inverse-on-surface": "#f1f0f5",
+                      "on-surface": "#1a1b1f",
+                      "primary-fixed": "#d7e3ff",
+                      "status-danger": "#DC2626",
+                      "tertiary-fixed": "#ffdcc2",
+                      "secondary-fixed-dim": "#ffb95f"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-desktop": "32px",
+                      "unit": "4px",
+                      "touch-target-min": "44px",
+                      "gutter": "16px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "technical-data": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-sm": [
+                              "Poppins"
+                      ],
+                      "headline-md": [
+                              "Poppins"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Poppins"
+                      ],
+                      "display-lg": [
+                              "Poppins"
+                      ]
+              },
+              "fontSize": {
+                      "technical-data": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "26px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .ghost-border {
+            border: 1px solid #F1F5F9;
+        }
+        .ghost-border:focus-within {
+            border-color: #002653;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-page-bg text-on-surface min-h-screen flex flex-col font-body-md">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-[0px_4px_12px_rgba(30,41,59,0.05)] docked full-width top-0 flex justify-between items-center px-margin-mobile h-14 w-full z-50">
+<button class="text-primary dark:text-inverse-primary hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform duration-150 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary">SI-CEKAT</h1>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow w-full max-w-[800px] mx-auto px-margin-mobile md:px-margin-desktop py-8 pb-24">
+<!-- Progress Header -->
+<div class="mb-8">
+<div class="flex justify-between items-end mb-2">
+<div>
+<p class="font-label-caps text-label-caps text-neutral-mid uppercase tracking-widest mb-1">Step 4 of 6</p>
+<h2 class="font-headline-sm text-headline-sm text-primary">Seksi III: Unsur Teknis Penunjang</h2>
+</div>
+<span class="font-technical-data text-technical-data text-neutral-mid">65%</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 65%;"></div>
+</div>
+<div class="mt-4 bg-secondary-fixed text-on-secondary-fixed p-3 rounded-lg border border-secondary flex items-start gap-3">
+<span class="material-symbols-outlined text-status-warning flex-shrink-0 mt-0.5">warning</span>
+<p class="font-body-md text-body-md">Beberapa item di seksi ini berakibat <strong class="font-semibold">PERINGATAN/PERBAIKI</strong> jika ditemukan ketidaksesuaian.</p>
+</div>
+</div>
+<!-- Form Sections -->
+<form class="space-y-8">
+<!-- Item: APAR -->
+<section class="bg-surface rounded-xl p-4 md:p-6 ghost-border shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-body-lg text-body-lg font-semibold text-neutral-dark">Lampu Posisi</h3>
+<p class="font-body-md text-body-md text-neutral-mid mt-1">Kondisi lampu penanda posisi kendaraan</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="lampu_posisi" type="radio" value="ok">
+<div class="h-[60px] flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-success peer-checked:border-status-success peer-checked:text-white text-on-surface transition-all">
+<span class="font-body-lg text-body-lg font-semibold text-center">Berfungsi Baik</span>
+</div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="lampu_posisi" type="radio" value="rusak">
+<div class="h-[60px] flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-danger peer-checked:border-status-danger peer-checked:text-white text-on-surface transition-all">
+<span class="font-body-lg text-body-lg font-semibold text-center">Rusak / Mati</span>
+</div>
+</label>
+</div>
+</section><section class="bg-surface rounded-xl p-4 md:p-6 ghost-border shadow-sm">
+<h3 class="font-body-lg text-body-lg font-semibold text-neutral-dark mb-4 border-b border-outline-variant pb-2">Badan Kendaraan</h3>
+<div class="space-y-4">
+<!-- Kaca Depan -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-page-bg rounded-lg border border-neutral-light">
+<span class="font-body-md text-body-md font-semibold">Kaca Depan</span>
+<div class="flex gap-2">
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="kaca_depan" type="radio" value="ok">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-success peer-checked:border-status-success peer-checked:text-white text-on-surface transition-all">Baik</div>
+</label>
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="kaca_depan" type="radio" value="rusak">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-danger peer-checked:border-status-danger peer-checked:text-white text-on-surface transition-all">Rusak</div>
+</label>
+</div>
+</div>
+<!-- Pintu Utama -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-page-bg rounded-lg border border-neutral-light">
+<span class="font-body-md text-body-md font-semibold">Pintu Utama</span>
+<div class="flex gap-2">
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="pintu_utama_v2" type="radio" value="ok">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-success peer-checked:border-status-success peer-checked:text-white text-on-surface transition-all">Baik</div>
+</label>
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="pintu_utama_v2" type="radio" value="rusak">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-danger peer-checked:border-status-danger peer-checked:text-white text-on-surface transition-all">Rusak</div>
+</label>
+</div>
+</div>
+<!-- Lantai & Tangga -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-page-bg rounded-lg border border-neutral-light">
+<span class="font-body-md text-body-md font-semibold">Lantai / Tangga</span>
+<div class="flex gap-2">
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="lantai_tangga_v2" type="radio" value="ok">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-success peer-checked:border-status-success peer-checked:text-white text-on-surface transition-all">Baik</div>
+</label>
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="lantai_tangga_v2" type="radio" value="rusak">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-danger peer-checked:border-status-danger peer-checked:text-white text-on-surface transition-all">Rusak</div>
+</label>
+</div>
+</div>
+<!-- Spion -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-page-bg rounded-lg border border-neutral-light">
+<span class="font-body-md text-body-md font-semibold">Spion</span>
+<div class="flex gap-2">
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="spion" type="radio" value="ok">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-success peer-checked:border-status-success peer-checked:text-white text-on-surface transition-all">Baik</div>
+</label>
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="spion" type="radio" value="rusak">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-danger peer-checked:border-status-danger peer-checked:text-white text-on-surface transition-all">Rusak</div>
+</label>
+</div>
+</div>
+<!-- Klakson -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-page-bg rounded-lg border border-neutral-light">
+<span class="font-body-md text-body-md font-semibold">Klakson</span>
+<div class="flex gap-2">
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="klakson" type="radio" value="ok">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-success peer-checked:border-status-success peer-checked:text-white text-on-surface transition-all">Bunyi</div>
+</label>
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="klakson" type="radio" value="rusak">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-danger peer-checked:border-status-danger peer-checked:text-white text-on-surface transition-all">Mati</div>
+</label>
+</div>
+</div>
+</div>
+</section><section class="bg-surface rounded-xl p-4 md:p-6 ghost-border shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-body-lg text-body-lg font-semibold text-neutral-dark">Kapasitas Tempat Duduk</h3>
+<p class="font-body-md text-body-md text-neutral-mid mt-1">Jumlah kursi sesuai kapasitas STNK/Buku Uji</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="kapasitas_duduk" type="radio" value="ok">
+<div class="h-[60px] flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-success peer-checked:border-status-success peer-checked:text-white text-on-surface transition-all">
+<span class="font-body-lg text-body-lg font-semibold text-center">Sesuai</span>
+</div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="kapasitas_duduk" type="radio" value="tidak_sesuai">
+<div class="h-[60px] flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-danger peer-checked:border-status-danger peer-checked:text-white text-on-surface transition-all">
+<span class="font-body-lg text-body-lg font-semibold text-center">Tidak Sesuai</span>
+</div>
+</label>
+</div>
+</section>
+<!-- Item: Pintu Utama -->
+
+<!-- Item: Lantai & Tangga -->
+<section class="bg-surface rounded-xl p-4 md:p-6 ghost-border shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-body-lg text-body-lg font-semibold text-neutral-dark">Lantai &amp; Tangga</h3>
+<p class="font-body-md text-body-md text-neutral-mid mt-1">Kondisi pelapis lantai, antislip, dan pijakan tangga</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<label class="cursor-pointer relative">
+<input checked="" class="peer sr-only" name="lantai_tangga" type="radio" value="ok">
+<div class="h-[60px] flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-success peer-checked:border-status-success peer-checked:text-white text-on-surface transition-all">
+<span class="font-body-lg text-body-lg font-semibold">Kondisi Baik</span>
+</div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="lantai_tangga" type="radio" value="rusak">
+<div class="h-[60px] flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-danger peer-checked:border-status-danger peer-checked:text-white text-on-surface transition-all">
+<span class="font-body-lg text-body-lg font-semibold">Rusak / Licin</span>
+</div>
+</label>
+</div>
+</section>
+<!-- Perlengkapan Kendaraan -->
+<section class="bg-surface rounded-xl p-4 md:p-6 ghost-border shadow-sm">
+<h3 class="font-body-lg text-body-lg font-semibold text-neutral-dark mb-4 border-b border-outline-variant pb-2">Perlengkapan Kendaraan</h3>
+<div class="space-y-4"><!-- Ban Cadangan -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-page-bg rounded-lg border border-neutral-light">
+<span class="font-body-md text-body-md font-semibold">Ban Cadangan</span>
+<div class="flex gap-2">
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="ban_cadangan" type="radio" value="ada">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-primary peer-checked:border-primary peer-checked:text-white text-on-surface transition-all">Ada</div>
+</label>
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="ban_cadangan" type="radio" value="tidak_ada">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-warning peer-checked:border-status-warning peer-checked:text-white text-on-surface transition-all">Tidak Ada</div>
+</label>
+</div>
+</div>
+<!-- Segitiga Pengaman -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-page-bg rounded-lg border border-neutral-light">
+<span class="font-body-md text-body-md font-semibold">Segitiga Pengaman</span>
+<div class="flex gap-2">
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="segitiga" type="radio" value="ada">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-primary peer-checked:border-primary peer-checked:text-white text-on-surface transition-all">Ada</div>
+</label>
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="segitiga" type="radio" value="tidak_ada">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-warning peer-checked:border-status-warning peer-checked:text-white text-on-surface transition-all">Tidak Ada</div>
+</label>
+</div>
+</div>
+<!-- Dongkrak -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-page-bg rounded-lg border border-neutral-light">
+<span class="font-body-md text-body-md font-semibold">Dongkrak</span>
+<div class="flex gap-2">
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="dongkrak" type="radio" value="ada">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-primary peer-checked:border-primary peer-checked:text-white text-on-surface transition-all">Ada</div>
+</label>
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="dongkrak" type="radio" value="tidak_ada">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-warning peer-checked:border-status-warning peer-checked:text-white text-on-surface transition-all">Tidak Ada</div>
+</label>
+</div>
+</div>
+<!-- Pembuka Roda -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-page-bg rounded-lg border border-neutral-light">
+<span class="font-body-md text-body-md font-semibold">Pembuka Roda</span>
+<div class="flex gap-2">
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="pembuka_roda" type="radio" value="ada">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-primary peer-checked:border-primary peer-checked:text-white text-on-surface transition-all">Ada</div>
+</label>
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="pembuka_roda" type="radio" value="tidak_ada">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-warning peer-checked:border-status-warning peer-checked:text-white text-on-surface transition-all">Tidak Ada</div>
+</label>
+</div>
+</div>
+<!-- Senter -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-page-bg rounded-lg border border-neutral-light">
+<span class="font-body-md text-body-md font-semibold">Senter</span>
+<div class="flex gap-2">
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="senter" type="radio" value="ada">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-primary peer-checked:border-primary peer-checked:text-white text-on-surface transition-all">Ada</div>
+</label>
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="senter" type="radio" value="tidak_ada">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-warning peer-checked:border-status-warning peer-checked:text-white text-on-surface transition-all">Tidak Ada</div>
+</label>
+</div>
+</div>
+<!-- Pengganjal Roda -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-page-bg rounded-lg border border-neutral-light">
+<span class="font-body-md text-body-md font-semibold">Pengganjal Roda</span>
+<div class="flex gap-2">
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="ganjal_roda" type="radio" value="ada">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-primary peer-checked:border-primary peer-checked:text-white text-on-surface transition-all">Ada</div>
+</label>
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="ganjal_roda" type="radio" value="tidak_ada">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-warning peer-checked:border-status-warning peer-checked:text-white text-on-surface transition-all">Tidak Ada</div>
+</label>
+</div>
+</div>
+<!-- Sabuk Penumpang -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-page-bg rounded-lg border border-neutral-light">
+<span class="font-body-md text-body-md font-semibold">Sabuk Penumpang</span>
+<div class="flex gap-2">
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="sabuk" type="radio" value="ada">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-primary peer-checked:border-primary peer-checked:text-white text-on-surface transition-all">Berfungsi</div>
+</label>
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="sabuk" type="radio" value="tidak_ada">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-warning peer-checked:border-status-warning peer-checked:text-white text-on-surface transition-all">Rusak</div>
+</label>
+</div>
+</div>
+<!-- Kotak P3K -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-page-bg rounded-lg border border-neutral-light">
+<span class="font-body-md text-body-md font-semibold">Kotak P3K</span>
+<div class="flex gap-2">
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="p3k_v2" type="radio" value="ada">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-primary peer-checked:border-primary peer-checked:text-white text-on-surface transition-all">Lengkap</div>
+</label>
+<label class="cursor-pointer relative flex-1 sm:flex-none">
+<input class="peer sr-only" name="p3k_v2" type="radio" value="tidak_ada">
+<div class="h-touch-target-min px-4 flex items-center justify-center border border-outline-variant rounded-lg peer-checked:bg-status-warning peer-checked:border-status-warning peer-checked:text-white text-on-surface transition-all">Tidak Lengkap</div>
+</label>
+</div>
+</div></div>
+</section>
+<!-- Navigation Actions -->
+<div class="flex gap-4 mt-8">
+<button class="flex-1 h-[48px] rounded-lg border border-primary text-primary font-body-md text-body-md font-semibold hover:bg-primary-fixed transition-colors" type="button">
+                   Kembali
+               </button>
+<button class="flex-[2] h-[48px] rounded-lg bg-primary text-white font-body-md text-body-md font-semibold hover:bg-on-primary-fixed transition-colors flex items-center justify-center gap-2" type="button">
+                   Lanjut ke Step 5
+                   <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</form>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-surface dark:bg-inverse-surface border-t border-outline-variant dark:border-outline shadow-[0px_-4px_12px_rgba(30,41,59,0.05)] fixed bottom-0 w-full z-50 flex justify-around items-center h-16 px-gutter md:hidden">
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant pt-2 hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors active:opacity-80 flex-1 h-full">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">home</span>
+<span class="font-label-caps text-label-caps mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-primary dark:text-inverse-primary border-t-2 border-primary pt-2 hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors active:opacity-80 flex-1 h-full">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">fact_check</span>
+<span class="font-label-caps text-label-caps mt-1">Inspection</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant pt-2 hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors active:opacity-80 flex-1 h-full">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">history</span>
+<span class="font-label-caps text-label-caps mt-1">History</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant pt-2 hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors active:opacity-80 flex-1 h-full">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">person</span>
+<span class="font-label-caps text-label-caps mt-1">Profile</span>
+</button>
+</nav>
+</body></html>

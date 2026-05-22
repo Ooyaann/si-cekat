@@ -1,0 +1,312 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>SI-CEKAT | Status Perbaikan Armada</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Poppins:wght@600;700&amp;family=JetBrains+Mono:wght@400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #F8FAFC;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#e8e7ec",
+                      "outline": "#747780",
+                      "surface": "#faf9fe",
+                      "inverse-primary": "#abc7ff",
+                      "tertiary-fixed": "#ffdcc2",
+                      "outline-variant": "#c4c6d0",
+                      "on-surface-variant": "#43474f",
+                      "on-background": "#1a1b1f",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-fixed-variant": "#6b3b09",
+                      "status-danger": "#DC2626",
+                      "on-secondary": "#ffffff",
+                      "status-warning": "#D97706",
+                      "surface-bright": "#faf9fe",
+                      "surface-dim": "#dad9de",
+                      "secondary": "#855300",
+                      "on-secondary-container": "#684000",
+                      "error": "#ba1a1a",
+                      "primary": "#002653",
+                      "surface-container-highest": "#e3e2e7",
+                      "primary-fixed": "#d7e3ff",
+                      "tertiary-container": "#5e3100",
+                      "on-primary-container": "#8aa8e0",
+                      "neutral-mid": "#64748B",
+                      "neutral-dark": "#1E293B",
+                      "surface-tint": "#405e92",
+                      "on-tertiary-container": "#db9960",
+                      "tertiary": "#3e1f00",
+                      "on-primary-fixed": "#001b3f",
+                      "secondary-fixed": "#ffddb8",
+                      "on-tertiary": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "secondary-container": "#fea619",
+                      "tertiary-fixed-dim": "#feb87c",
+                      "page-bg": "#F8FAFC",
+                      "surface-container": "#eeedf2",
+                      "background": "#faf9fe",
+                      "on-primary-fixed-variant": "#264679",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed": "#2e1500",
+                      "surface-variant": "#e3e2e7",
+                      "on-secondary-fixed": "#2a1700",
+                      "inverse-on-surface": "#f1f0f5",
+                      "inverse-surface": "#2f3034",
+                      "secondary-fixed-dim": "#ffb95f",
+                      "status-success": "#16A34A",
+                      "error-container": "#ffdad6",
+                      "primary-container": "#1a3c6e",
+                      "surface-container-low": "#f4f3f8",
+                      "on-secondary-fixed-variant": "#653e00",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#abc7ff",
+                      "neutral-light": "#F1F5F9",
+                      "on-surface": "#1a1b1f"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "touch-target-min": "44px",
+                      "margin-mobile": "16px",
+                      "margin-desktop": "32px",
+                      "unit": "4px",
+                      "gutter": "16px"
+              },
+              "fontFamily": {
+                      "headline-sm": ["Poppins"],
+                      "display-lg": ["Poppins"],
+                      "body-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "headline-md": ["Poppins"],
+                      "technical-data": ["JetBrains Mono"],
+                      "headline-lg-mobile": ["Poppins"]
+              },
+              "fontSize": {
+                      "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "display-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "technical-data": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["26px", {"lineHeight": "1.2", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-page-bg font-body-md text-on-surface">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant flex justify-between items-center px-margin-mobile h-touch-target-min">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A professional profile avatar for a fleet manager, rendered in a clean minimalist style with a soft light-blue background. The avatar is simple, modern, and fits into a corporate UI design system. Lighting is uniform and high-key, maintaining a professional and authoritative aesthetic consistent with the vehicle inspection platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTpYPupuYANFAhmbh1flSdAZS1ZlB0uRo2jCmXBdu0h27TGBD3LOhpCMQVDWY2Y8rciko-HekgD3l5A2F2EaPdGCU7SE1iWa-udQ0vOBCsPJbLWElCidOBevnsiosgqjsF4LZMw-3tEBnfXYVzFOTJXlHBO3dQKiUkRwT3ixXtubBBUV-EXpLK2t-YJx8gRk3-Wd_Ii8CQKUSmn7XU7v6WmBIw-xzUldsUKhUa3QUi9hn9N0NWoVUsb97z8eg9OLlV7A191Dc7CBg">
+</div>
+<span class="font-headline-md text-headline-md font-bold text-primary">SI-CEKAT</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-touch-target-min h-touch-target-min flex items-center justify-center hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="material-symbols-outlined text-primary">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-[64px] pb-[80px] px-margin-mobile max-w-md mx-auto">
+<!-- Page Header -->
+<section class="py-6">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-neutral-dark mb-2">Status Perbaikan Armada</h1>
+<p class="text-body-md text-on-surface-variant">Log real-time perbaikan unit kendaraan di bengkel.</p>
+</section>
+<!-- Search and Filter -->
+<section class="space-y-4 mb-6">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full h-[48px] pl-12 pr-4 bg-surface-container-lowest border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all placeholder:text-outline" placeholder="Cari nomor polisi (e.g. B 1234 CD)..." type="text">
+</div>
+<div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+<button class="px-4 py-2 bg-primary text-white rounded-full font-label-caps text-label-caps whitespace-nowrap">SEMUA</button>
+<button class="px-4 py-2 bg-white border border-outline-variant text-on-surface-variant hover:bg-surface-container-low rounded-full font-label-caps text-label-caps whitespace-nowrap">DALAM PROSES</button>
+<button class="px-4 py-2 bg-white border border-outline-variant text-on-surface-variant hover:bg-surface-container-low rounded-full font-label-caps text-label-caps whitespace-nowrap">MENUNGGU PART</button>
+<button class="px-4 py-2 bg-white border border-outline-variant text-on-surface-variant hover:bg-surface-container-low rounded-full font-label-caps text-label-caps whitespace-nowrap">SELESAI</button>
+</div>
+</section>
+<!-- Vehicle List Container -->
+<div class="space-y-4">
+<!-- Card 1: In Progress -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 transition-transform active:scale-[0.98]">
+<div class="flex justify-between items-start mb-3">
+<div>
+<span class="font-technical-data text-technical-data font-bold tracking-wider text-neutral-dark">B 4821 TKP</span>
+<h3 class="font-headline-sm text-headline-sm mt-1">Hino Ranger FL 235</h3>
+</div>
+<span class="px-2 py-1 bg-secondary-container text-on-secondary-container font-label-caps text-[10px] rounded uppercase font-bold tracking-tight">Dalam Perbaikan</span>
+</div>
+<div class="grid grid-cols-2 gap-4 border-y border-outline-variant/30 py-3 mb-3">
+<div>
+<p class="text-label-caps text-outline mb-1">KERUSAKAN</p>
+<p class="font-bold text-neutral-dark">Sistem Pengereman</p>
+</div>
+<div>
+<p class="text-label-caps text-outline mb-1">ESTIMASI SELESAI</p>
+<p class="font-bold text-status-warning">14:00 (Hari Ini)</p>
+</div>
+</div>
+<div class="flex justify-between items-center text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Diupdate 15 menit yang lalu</span>
+</div>
+<button class="text-primary font-bold flex items-center gap-1">
+                        DETAIL <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Waiting for Parts -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 transition-transform active:scale-[0.98]">
+<div class="flex justify-between items-start mb-3">
+<div>
+<span class="font-technical-data text-technical-data font-bold tracking-wider text-neutral-dark">B 9011 UVA</span>
+<h3 class="font-headline-sm text-headline-sm mt-1">Isuzu Giga FVR</h3>
+</div>
+<span class="px-2 py-1 bg-status-danger text-white font-label-caps text-[10px] rounded uppercase font-bold tracking-tight">Menunggu Part</span>
+</div>
+<div class="grid grid-cols-2 gap-4 border-y border-outline-variant/30 py-3 mb-3">
+<div>
+<p class="text-label-caps text-outline mb-1">KERUSAKAN</p>
+<p class="font-bold text-neutral-dark">Injektor Nozzle #4</p>
+</div>
+<div>
+<p class="text-label-caps text-outline mb-1">ESTIMASI SELESAI</p>
+<p class="font-bold text-outline">Tertunda</p>
+</div>
+</div>
+<div class="flex justify-between items-center text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Diupdate 2 jam yang lalu</span>
+</div>
+<button class="text-primary font-bold flex items-center gap-1">
+                        DETAIL <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Completed (Laik) -->
+<div class="bg-surface-container-lowest border-l-4 border-l-status-success border-y border-r border-outline-variant rounded-xl p-4 transition-transform active:scale-[0.98]">
+<div class="flex justify-between items-start mb-3">
+<div>
+<span class="font-technical-data text-technical-data font-bold tracking-wider text-neutral-dark">B 2293 SYP</span>
+<h3 class="font-headline-sm text-headline-sm mt-1">Mitsubishi Fuso Fighter</h3>
+</div>
+<span class="px-2 py-1 bg-status-success text-white font-label-caps text-[10px] rounded uppercase font-bold tracking-tight">Selesai (Laik)</span>
+</div>
+<div class="grid grid-cols-2 gap-4 border-y border-outline-variant/30 py-3 mb-3">
+<div>
+<p class="text-label-caps text-outline mb-1">KERUSAKAN</p>
+<p class="font-bold text-neutral-dark">Kelistrikan Lampu</p>
+</div>
+<div>
+<p class="text-label-caps text-outline mb-1">WAKTU SELESAI</p>
+<p class="font-bold text-status-success">09:15 (Selesai)</p>
+</div>
+</div>
+<div class="flex justify-between items-center text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Siap beroperasi kembali</span>
+</div>
+<button class="text-primary font-bold flex items-center gap-1">
+                        AMBIL <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 4: Maintenance -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 transition-transform active:scale-[0.98]">
+<div class="flex justify-between items-start mb-3">
+<div>
+<span class="font-technical-data text-technical-data font-bold tracking-wider text-neutral-dark">B 1033 PKZ</span>
+<h3 class="font-headline-sm text-headline-sm mt-1">Mercedes-Benz Axor</h3>
+</div>
+<span class="px-2 py-1 bg-secondary-container text-on-secondary-container font-label-caps text-[10px] rounded uppercase font-bold tracking-tight">Perawatan Rutin</span>
+</div>
+<div class="grid grid-cols-2 gap-4 border-y border-outline-variant/30 py-3 mb-3">
+<div>
+<p class="text-label-caps text-outline mb-1">JENIS</p>
+<p class="font-bold text-neutral-dark">Ganti Oli &amp; Filter</p>
+</div>
+<div>
+<p class="text-label-caps text-outline mb-1">ESTIMASI SELESAI</p>
+<p class="font-bold text-status-warning">Besok, 08:00</p>
+</div>
+</div>
+<div class="flex justify-between items-center text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Diupdate 5 jam yang lalu</span>
+</div>
+<button class="text-primary font-bold flex items-center gap-1">
+                        DETAIL <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface-container-lowest shadow-[0px_-4px_12px_rgba(30,41,59,0.05)] flex justify-around items-center h-[64px] px-margin-mobile">
+<a class="flex flex-col items-center justify-center text-on-surface-variant pt-1 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-caps text-label-caps mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary border-t-2 border-primary pt-1 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">fact_check</span>
+<span class="font-label-caps text-label-caps mt-1">Inspection</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant pt-1 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-caps text-label-caps mt-1">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant pt-1 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-caps text-label-caps mt-1">Profile</span>
+</a>
+</nav>
+<script>
+        // Micro-interactions for interaction states
+        document.querySelectorAll('.active\\:scale-\\[0\\.98\\]').forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.style.backgroundColor = '#F1F5F9';
+            });
+            card.addEventListener('touchend', () => {
+                card.style.backgroundColor = '#FFFFFF';
+            });
+        });
+
+        // Filter chips toggle simulation
+        const chips = document.querySelectorAll('.whitespace-nowrap');
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chips.forEach(c => {
+                    c.classList.remove('bg-primary', 'text-white');
+                    c.classList.add('bg-white', 'border', 'border-outline-variant', 'text-on-surface-variant');
+                });
+                chip.classList.remove('bg-white', 'border', 'border-outline-variant', 'text-on-surface-variant');
+                chip.classList.add('bg-primary', 'text-white');
+            });
+        });
+    </script>
+</body></html>

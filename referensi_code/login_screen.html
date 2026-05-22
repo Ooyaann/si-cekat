@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Login - SI-CEKAT</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@400&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "page-bg": "#F8FAFC",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "outline": "#747780",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#43474f",
+                        "inverse-on-surface": "#f1f0f5",
+                        "tertiary-fixed": "#ffdcc2",
+                        "surface-container-low": "#f4f3f8",
+                        "on-secondary-container": "#684000",
+                        "on-tertiary-fixed-variant": "#6b3b09",
+                        "surface-variant": "#e3e2e7",
+                        "secondary-container": "#fea619",
+                        "on-tertiary-fixed": "#2e1500",
+                        "surface-bright": "#faf9fe",
+                        "status-danger": "#DC2626",
+                        "on-tertiary-container": "#db9960",
+                        "primary-fixed-dim": "#abc7ff",
+                        "neutral-dark": "#1E293B",
+                        "surface-container": "#eeedf2",
+                        "surface-container-high": "#e8e7ec",
+                        "primary-container": "#1a3c6e",
+                        "tertiary-container": "#5e3100",
+                        "primary": "#002653",
+                        "on-primary": "#ffffff",
+                        "neutral-mid": "#64748B",
+                        "tertiary-fixed-dim": "#feb87c",
+                        "on-primary-fixed": "#001b3f",
+                        "inverse-surface": "#2f3034",
+                        "inverse-primary": "#abc7ff",
+                        "surface-container-lowest": "#ffffff",
+                        "status-warning": "#D97706",
+                        "tertiary": "#3e1f00",
+                        "status-success": "#16A34A",
+                        "outline-variant": "#c4c6d0",
+                        "primary-fixed": "#d7e3ff",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#2a1700",
+                        "surface": "#faf9fe",
+                        "on-surface": "#1a1b1f",
+                        "surface-container-highest": "#e3e2e7",
+                        "secondary-fixed-dim": "#ffb95f",
+                        "background": "#faf9fe",
+                        "secondary": "#855300",
+                        "neutral-light": "#F1F5F9",
+                        "on-secondary-fixed-variant": "#653e00",
+                        "on-background": "#1a1b1f",
+                        "on-primary-fixed-variant": "#264679",
+                        "surface-tint": "#405e92",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#8aa8e0",
+                        "surface-dim": "#dad9de",
+                        "secondary-fixed": "#ffddb8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "gutter": "16px",
+                        "unit": "4px",
+                        "margin-desktop": "32px",
+                        "touch-target-min": "44px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Inter"],
+                        "technical-data": ["JetBrains Mono"],
+                        "headline-md": ["Poppins"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["Poppins"],
+                        "headline-lg-mobile": ["Poppins"],
+                        "display-lg": ["Poppins"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "technical-data": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["26px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "display-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        .tab-btn.active {
+            border-bottom: 2px solid theme('colors.primary');
+            color: theme('colors.primary');
+        }
+        .tab-btn.inactive {
+            border-bottom: 2px solid transparent;
+            color: theme('colors.neutral-mid');
+        }
+        
+        .form-section {
+            display: none;
+        }
+        .form-section.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-page-bg min-h-screen flex items-center justify-center p-gutter md:p-margin-desktop text-on-surface">
+<div class="w-full max-w-[400px] bg-surface-container-lowest border border-neutral-light rounded-xl shadow-[0px_4px_12px_rgba(30,41,59,0.05)] overflow-hidden">
+<!-- Header -->
+<div class="p-8 pb-6 text-center">
+<div class="flex justify-center mb-4">
+<span class="material-symbols-outlined text-primary" style="font-size: 48px;">local_shipping</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-primary mb-2">SI-CEKAT</h1>
+<p class="font-body-md text-body-md text-neutral-mid">Selamat Datang di Sistem Inspeksi</p>
+</div>
+<!-- Tab Switcher -->
+<div class="flex border-b border-neutral-light px-6">
+<button class="flex-1 py-3 tab-btn active font-label-caps text-label-caps uppercase transition-colors" id="tab-supir" onclick="switchTab('supir')">Supir</button>
+<button class="flex-1 py-3 tab-btn inactive font-label-caps text-label-caps uppercase transition-colors" id="tab-admin" onclick="switchTab('admin')">Admin</button>
+</div>
+<!-- Content Area -->
+<div class="p-6">
+<!-- Supir Form -->
+<div class="form-section active space-y-[12px]" id="form-supir">
+<div>
+<label class="block font-label-caps text-label-caps text-neutral-mid mb-[4px] uppercase">Nomor SIM</label>
+<input class="w-full h-touch-target-min px-3 bg-surface-container-lowest border border-neutral-light rounded focus:ring-2 focus:ring-primary focus:border-primary font-technical-data text-technical-data text-on-surface outline-none transition-shadow" placeholder="Masukkan Nomor SIM" type="text">
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-neutral-mid mb-[4px] uppercase">PIN</label>
+<input class="w-full h-touch-target-min px-3 bg-surface-container-lowest border border-neutral-light rounded focus:ring-2 focus:ring-primary focus:border-primary font-technical-data text-technical-data text-on-surface outline-none transition-shadow" placeholder="Masukkan PIN" type="password">
+</div>
+</div>
+<!-- Admin Form -->
+<div class="form-section space-y-[12px]" id="form-admin">
+<div>
+<label class="block font-label-caps text-label-caps text-neutral-mid mb-[4px] uppercase">Username</label>
+<input class="w-full h-touch-target-min px-3 bg-surface-container-lowest border border-neutral-light rounded focus:ring-2 focus:ring-primary focus:border-primary font-technical-data text-technical-data text-on-surface outline-none transition-shadow" placeholder="admin@sicekat.com" type="text">
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-neutral-mid mb-[4px] uppercase">Password</label>
+<input class="w-full h-touch-target-min px-3 bg-surface-container-lowest border border-neutral-light rounded focus:ring-2 focus:ring-primary focus:border-primary font-technical-data text-technical-data text-on-surface outline-none transition-shadow" placeholder="••••••••" type="password">
+</div>
+</div>
+<!-- Actions -->
+<div class="mt-[32px]">
+<button class="w-full h-touch-target-min bg-status-warning text-neutral-dark font-label-caps text-label-caps uppercase rounded-md hover:bg-opacity-90 active:scale-[0.98] transition-all">
+                    Masuk
+                </button>
+</div>
+</div>
+<!-- Footer -->
+<div class="p-6 pt-0 text-center">
+<a class="font-body-md text-body-md text-primary hover:underline" href="#">Lupa Password?</a>
+</div>
+</div>
+<script>
+        function switchTab(tabId) {
+            // Update Buttons
+            document.getElementById('tab-supir').classList.replace(tabId === 'supir' ? 'inactive' : 'active', tabId === 'supir' ? 'active' : 'inactive');
+            document.getElementById('tab-admin').classList.replace(tabId === 'admin' ? 'inactive' : 'active', tabId === 'admin' ? 'active' : 'inactive');
+            
+            // Update Forms
+            document.getElementById('form-supir').classList.toggle('active', tabId === 'supir');
+            document.getElementById('form-admin').classList.toggle('active', tabId === 'admin');
+        }
+    </script>
+</body></html>
